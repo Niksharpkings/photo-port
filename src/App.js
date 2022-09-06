@@ -21,21 +21,19 @@ function App() {
 
   return (
     <div>
-      <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      ></Nav>
+      <Nav categories={categories}
+      setCurrentCategory={setCurrentCategory}
+      currentCategory={currentCategory}
+      contactSelected={contactSelected}
+      setContactSelected={setContactSelected} />
       <main>
         {!contactSelected ? (
           <>
-            <Gallery currentCategory={currentCategory}></Gallery>
-            <About></About>
+            <Gallery currentCategory={currentCategory} />
+            <About />
           </>
         ) : (
-          <ContactForm></ContactForm>
+          <ContactForm />
         )}
       </main>
     </div>
