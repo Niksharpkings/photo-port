@@ -1,4 +1,3 @@
-// __tests__/Modal.test.js with hard coded categories
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -20,7 +19,7 @@ describe('Modal component', () => {
       onClose={mockToggleModal}
       currentPhoto={currentPhoto}
     />);
-  })
+})
 
   it('matches snapshot DOM node structure', () => {
     const { asFragment } = render(<Modal
@@ -42,4 +41,4 @@ describe('Click Event', () => {
 
     expect(mockToggleModal).toHaveBeenCalledTimes(1);
   });
-})  
+})
